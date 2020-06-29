@@ -68,8 +68,8 @@ To publish an event to all listeners:
    bundle *event_data = NULL;
 
    ret = event_add_event_handler("event.org.tizen.senderapp.user_event",
-                                 user_event_cb, "CUSTOM_EVENT_KEY", &event_handler);
-
+                                 user_event_cb, user_data, &event_handler);
+    
    if (ret != EVENT_ERROR_NONE)
        dlog_print(DLOG_ERROR, LOG_TAG, "err: [%d]", ret);
 
